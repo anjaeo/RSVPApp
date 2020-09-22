@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AnjaeRSVP.Views.RsvpPage" BackgroundColor="#F3E771">
+    <ContentPage.Content>
+        <StackLayout Margin="30">
+            <Label Text="RSVP" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold" />
+            <Label Text="" HorizontalOptions="Center" FontSize="Large" x:Name="eventName" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Name" HorizontalOptions="Center" />
+                <Entry Grid.Column="1" Placeholder="" x:Name="userName"/>
+                <Label Grid.Row="1" Text="Phone Number" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="1" Placeholder="" x:Name="phone" />
+                <Label Grid.Row="2" Text="Email" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="2" Placeholder="" x:Name="email"/>
+                <Button Grid.Row="3" Text="Confirm" Clicked="ConfirmButton_Clicked"/>
+                <Button Grid.Row="3" Grid.Column="1" Text="Cancel" Clicked="CancelButton_Clicked" />
+            </Grid>
+            <Label Text="" TextColor="Red" x:Name="errorLbl" HorizontalTextAlignment="Center" FontSize="Caption" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

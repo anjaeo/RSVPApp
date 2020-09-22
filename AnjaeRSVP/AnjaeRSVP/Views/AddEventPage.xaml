@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AnjaeRSVP.Views.AddEventPage" BackgroundColor="#F3E771">
+    <ContentPage.Content>
+        <StackLayout Margin="30">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Host" HorizontalOptions="Center" />
+                <Entry Grid.Column="1" Placeholder="" x:Name="hostName" />
+                <Label Grid.Row="1" Text="Event Name" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="1" Placeholder="" x:Name="eventName"/>
+                <Label Grid.Row="2" Text="Address" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="2" Placeholder="" x:Name="eventAddress"/>
+                <Label Grid.Row="3" Text="Date" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="3" Placeholder="" x:Name="eventDate"/>
+                <Label Grid.Row="4" Text="Time" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="4" Placeholder="" x:Name="eventTime"/>
+                <Label Grid.Row="5" Text="Max Guests" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="5" Placeholder="" x:Name="maxGuests"/>
+                <Label Grid.Row="6" Text="Deadline" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="6" Placeholder="" x:Name="eventDeadline"/>
+                <Button Grid.Row="7" Grid.Column="1" Text="Cancel" Clicked="AddEventCancelButton_Clicked" x:Name="AddEventCancelBtn" />
+                <Button Grid.Row="7" Text="Add Event" Clicked="AddEventButton_Clicked" x:Name="AddEventBtn" />
+            </Grid>
+            <Label Text="" TextColor="Red" x:Name="errorLbl" HorizontalTextAlignment="Center" FontSize="Caption" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

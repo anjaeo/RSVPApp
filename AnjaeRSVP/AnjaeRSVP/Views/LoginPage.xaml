@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AnjaeRSVP.MainPage" BackgroundColor="#F3E771">
+
+    <StackLayout VerticalOptions="Center" Margin="20">
+        <Label Text="Welcome to the RSVP App!" 
+           HorizontalOptions="Center"
+            FontAttributes="Italic" FontSize="Large" TextColor="#B308FA" >
+        </Label>
+        <Label Text="" x:Name="ErrorLbl" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="Username" FontSize="Large" />
+            <Label Grid.Row="1" Text="Password" FontSize="Large"/>
+            <Entry Grid.Column="1" Placeholder="Enter username" FontSize="Subtitle" x:Name="usernameInput" />
+            <Entry Grid.Column="1" Grid.Row="1" Placeholder="Enter password" FontSize="Subtitle" x:Name="passwordInput" />
+            <Button Grid.Row="2" Text="Login" BackgroundColor="#F3E771" BorderColor="#B308FA" BorderWidth="3" FontAttributes="Bold" Clicked="LoginButton_Clicked"/>
+            <Button Grid.Column="1" Grid.Row="2" Text="Clear" BackgroundColor="#F3E771" BorderColor="#B308FA" BorderWidth="3" FontAttributes="Bold"
+                   Clicked="ClearButton_Clicked" />
+            <Button Grid.Column="0" Grid.Row="3" Text="New? register" BackgroundColor="#F3E771" BorderColor="#B308FA" BorderWidth="3" FontAttributes="Bold" 
+                   Clicked="RegisterButton_Clicked" />
+            <Button Grid.Column="1" Grid.Row="3" Text="Login As Guest" BackgroundColor="#F3E771" BorderColor="#B308FA" BorderWidth="3" FontAttributes="Bold" Clicked="GuestLoginButton_Clicked" x:Name="GuestLoginBtn" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

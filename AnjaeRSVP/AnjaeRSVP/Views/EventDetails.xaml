@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AnjaeRSVP.Views.EventDetails" BackgroundColor="#F3E771">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Name of Event Here" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="#B308FA" FontSize="Title" x:Name="eventName" />
+            <Grid VerticalOptions="CenterAndExpand" RowSpacing="25" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Host Name" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center"  />
+                <Label Grid.Column="1" Text="" FontSize="Caption" x:Name="hostName" HorizontalTextAlignment="Center" />
+                <Label Text="Address" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center" Grid.Row="1" />
+                <Label Grid.Column="1" Text="" FontSize="Caption" x:Name="eventAddress" HorizontalTextAlignment="Center" Grid.Row="1" />
+                <Label Text="Date" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center" Grid.Row="2" />
+                <Label Grid.Column="1" Text="" FontSize="Caption" x:Name="eventDate" HorizontalTextAlignment="Center" Grid.Row="2" />
+                <Label Text="Time" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center" Grid.Row="3" />
+                <Label Grid.Column="1" Text="" FontSize="Caption" x:Name="eventTime" HorizontalTextAlignment="Center" Grid.Row="3" />
+                <Label Text="Max Guests" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center" Grid.Row="4" />
+                <Label Grid.Column="1" Text="" FontSize="Caption" x:Name="eventMax" HorizontalTextAlignment="Center" Grid.Row="4" />
+                <Label Text="Current Guests" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center" Grid.Row="5" />
+                <Label Grid.Column="1" Text="" FontSize="Caption" x:Name="eventCurrentGuests" HorizontalTextAlignment="Center" Grid.Row="5" />
+                <Label Text="Deadline to RSVP" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center" Grid.Row="6" />
+                <Label Grid.Column="1" Text="" FontSize="Caption" x:Name="eventDeadline" HorizontalTextAlignment="Center" Grid.Row="6" />
+            </Grid>
+            
+            <Button Text="View Guests" />
+            <Button Text="RSVP" x:Name="rsvpOrCancelBtn" Clicked="RSVPButton_Clicked" />
+            <Button Text="Back" InputTransparent="False" BackgroundColor="#F3E771" FontSize="Small" HorizontalOptions="Start" Clicked="BackButton_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

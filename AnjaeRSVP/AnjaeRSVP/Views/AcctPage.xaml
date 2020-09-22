@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AnjaeRSVP.Views.AcctPage" BackgroundColor="#F3E771">
+    
+    <ContentPage.Content>
+        <StackLayout WidthRequest="-1" Padding="20,0,0,0" VerticalOptions="StartAndExpand">
+            <Label Text="User Information" TextColor="#B308FA" FontSize="Large" />
+            <Grid x:Name="gvUser">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Name" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium"  />
+                <Label Grid.Column="1" Text="" FontSize="Caption" x:Name="userName" />
+                <Label  Text="Phone Number" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" Grid.Row="1"  />
+                <Label Grid.Column="1" Text="{Binding phone}" FontSize="Caption" Grid.Row="1" x:Name="userPhone" />
+                <Label Text="Email" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" Grid.Row="2"  />
+                <Label Grid.Column="1" Text="" FontSize="Caption" Grid.Row="2" x:Name="userEmail" />
+                <Label Text="Username" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" Grid.Row="3"  />
+                <Label Grid.Column="1" Text="" FontSize="Caption" Grid.Row="3" x:Name="userUsername" />
+                <Label Text="Password" TextColor="#000000"  FontAttributes="Bold" FontSize="Medium" Grid.Row="4"  />
+                <Label Grid.Column="1" Text="" FontSize="Caption" Grid.Row="4" x:Name="userPassword" />
+            </Grid>
+            
+            <Label Text="RSVP'ed Events" TextColor="#B308FA" FontSize="Large" />
+            <Grid Margin="20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Event Name" TextColor="#000000" x:Name="eventName" />
+                <Button Text="view details" Grid.Column="1" BackgroundColor="#000000" TextColor="#FAF7F7" HorizontalOptions="Center" Clicked="EventDetailsButton_Clicked" />
+                <Label Text="Event Name" TextColor="#000000" Grid.Row="1" />
+                <Button Text="view details" Grid.Column="1" BackgroundColor="#000000" TextColor="#FAF7F7" HorizontalOptions="Center" Grid.Row="1" Clicked="EventDetailsButton_Clicked"/>
+            </Grid>
+            
+            <Label Text="Your Events" TextColor="#B308FA" FontSize="Large" />
+            <Grid Margin="20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Event Name" TextColor="#000000" />
+                <Button Text="view details" Grid.Column="1" BackgroundColor="#000000" TextColor="#FAF7F7" HorizontalOptions="Center" />
+                <Label Text="Event Name" TextColor="#000000" Grid.Row="1"  />
+                <Button Text="view details" Grid.Column="1" BackgroundColor="#000000" TextColor="#FAF7F7" HorizontalOptions="Center" Grid.Row="1" />
+            </Grid>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Edit Profile" />
+            <Button Grid.Column="1"  Text="Logout" Clicked="LogoutButton_Clicked" x:Name="LogoutBtn" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

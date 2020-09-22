@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AnjaeRSVP.Views.RegisterPage" BackgroundColor="#F3E771">
+    <ContentPage.Content>
+        <StackLayout Margin="30">
+            <Label Text="Sign Up For An Account!" FontSize="Title" HorizontalOptions="Center" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="First Name" HorizontalOptions="Center" />
+                <Entry Grid.Column="1" Placeholder="" x:Name="txtFirstName" />
+                <Label Grid.Row="1" Text="Last Name" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="1" Placeholder="" x:Name="txtLastName"/>
+                <Label Grid.Row="2" Text="Email Address" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="2" Placeholder="" x:Name="txtEmail"/>
+                <Label Grid.Row="3" Text="Phone Number" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="3" Placeholder="" x:Name="txtPhone"/>
+                <Label Grid.Row="4" Text="Username" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="4" Placeholder="" x:Name="txtUsername" />
+                <Label Grid.Row="5" Text="Password" HorizontalOptions="Center"/>
+                <Entry Grid.Column="1" Grid.Row="5" Placeholder="" x:Name="txtPassword" />
+
+                <Button Grid.Row="7" Text="Register" x:Name="RegisterBtn" BackgroundColor="#F3E771" BorderColor="#B308FA" BorderWidth="3" FontAttributes="Bold" Clicked="RegisterBtn_Clicked" />
+                <Button Grid.Row="7" Grid.Column="1" Text="Cancel"  x:Name="RegisterCancelBtn" BackgroundColor="#F3E771" BorderColor="#B308FA" BorderWidth="3" FontAttributes="Bold" Clicked="RegisterCancelBtn_Clicked" />
+                
+            </Grid>
+            <Label Text="" TextColor="Red" x:Name="errorLbl" HorizontalTextAlignment="Center" FontSize="Caption" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
